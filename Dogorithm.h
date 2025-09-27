@@ -14,5 +14,6 @@ class Dogorithm : public ChatRoom
         void saveMesssage(string,Users);
         void removeUser(Users);
         void clone();
+        
 };
 #endif
