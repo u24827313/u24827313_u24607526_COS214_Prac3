@@ -1,5 +1,5 @@
-#ifndef CHANTROOM_H
-#define CHATROOM_H
+#ifndef COMMAND_H
+#define COMMAND_H
 #include "Users.h"
 #include "ChatRoom.h"
 #include <string>
