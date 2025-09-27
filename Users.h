@@ -9,6 +9,8 @@ class Users
 {
     protected:
         ChatRoom* chatRoom;
+        string name;
+        Command* commandQueue;
 };
 
 
