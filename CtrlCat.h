@@ -1,5 +1,5 @@
-#ifndef DOGORITHM
-#define DOGORITHM
+#ifndef CTRLCAT
+#define CRTLCAT
 #include "ChatRoom.h"
 
 class CtrlCat: public ChatRoom
@@ -13,6 +13,6 @@ class CtrlCat: public ChatRoom
         void saveMesssage(string,Users);
         void removeUser(Users);
         void clone();
-        
+
 };
 #endif
