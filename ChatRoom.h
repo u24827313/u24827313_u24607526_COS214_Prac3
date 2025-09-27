@@ -16,6 +16,7 @@ class ChatRoom
         virtual void sendMessage(string,Users) = 0;
         virtual void saveMesssage(string,Users) = 0;
         virtual void removeUser(Users) = 0;
+        virtual void clone()=0;
 
 };
 #endif
