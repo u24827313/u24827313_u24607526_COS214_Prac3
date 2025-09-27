@@ -12,6 +12,6 @@ class Command
         string message;
         Users fromUser;
     public:
-    
+        virtual void execute()=0;
 };
 #endif

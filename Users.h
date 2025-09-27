@@ -11,6 +11,12 @@ class Users
         ChatRoom* chatRoom;
         string name;
         Command* commandQueue;
+
+    public:
+        void send(string message, ChatRoom room);
+        void receive(string message,Users fromUser,ChatRoom room);
+        void addCommand(Command command);
+        void executeAll();
 };
 
 
