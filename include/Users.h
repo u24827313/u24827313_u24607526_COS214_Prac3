@@ -45,7 +45,7 @@ public:
      * @param message The message content to send.
      * @param room The chat room to which the message is sent.
      */
-    void send(std::string message, ChatRoom room);
+    void send(std::string message, ChatRoom* room);
 
     Users(std::string& name,ChatRoom* room,Command* commandQueue);
     /**
