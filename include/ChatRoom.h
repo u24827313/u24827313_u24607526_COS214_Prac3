@@ -25,7 +25,7 @@ class ChatRoom
 {
 private:    
     Users* users;           ///< Pointer to users collection
-    string* chatHistory;    ///< Pointer to chat history storage
+    std::string* chatHistory;    ///< Pointer to chat history storage
 
 public:
     /**
@@ -41,7 +41,7 @@ public:
      * @param sender The user sending the message
      * @virtual
      */
-    virtual void sendMessage(string message, Users sender) = 0;
+    virtual void sendMessage(std::string message, Users sender) = 0;
     
     /**
      * @brief Save a message to chat history
@@ -49,7 +49,7 @@ public:
      * @param user The user associated with the message
      * @virtual
      */
-    virtual void saveMesssage(string message, Users user) = 0;
+    virtual void saveMesssage(std::string message, Users user) = 0;
     
     /**
      * @brief Remove a user from the chat room

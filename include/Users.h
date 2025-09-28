@@ -1,5 +1,5 @@
 /**
- * @file User.h
+ * @file Users.h
  * @brief Declaration of the Users class and related functionality.
  * @defgroup UserModule User Module
  * @brief Module for managing chat users, message sending/receiving,
@@ -32,7 +32,7 @@ protected:
     /**
      * @brief The name of the user.
      */
-    string name;
+    std::string name;
 
     /**
      * @brief Queue of commands for deferred execution.
@@ -46,8 +46,9 @@ public:
      * @param message The message content to send.
      * @param room The chat room to which the message is sent.
      */
-    void send(string message, ChatRoom room);
+    void send(std::string message, ChatRoom room);
 
+    Users(std::string name,ChatRoom room,Command* commandQueue);
     /**
      * @brief Receives a message from another user in a chat room.
      *
@@ -55,7 +56,7 @@ public:
      * @param fromUser The user who sent the message.
      * @param room The chat room where the message was sent.
      */
-    void receive(string message, Users fromUser, ChatRoom room);
+    void receive(std::string message, Users fromUser, ChatRoom room);
 
     /**
      * @brief Adds a command to the user's command queue.
