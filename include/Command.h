@@ -34,5 +34,6 @@ class Command
          * @virtual
          */
         virtual void execute()=0;
+        Command(ChatRoom* room, string message, Users fromUser);
 };
 #endif

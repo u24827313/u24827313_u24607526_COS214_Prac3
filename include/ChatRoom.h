@@ -10,6 +10,7 @@
 
 #include "Users.h"
 #include <string>
+#include "Iterator.h"
 using namespace std;
 
 /**

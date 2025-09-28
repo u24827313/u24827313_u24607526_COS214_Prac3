@@ -38,24 +38,24 @@ class Iterator{
          * @brief goes to the next pointer in the chatHistory
          * @virtual 
          */
-        virtual Iterator& operator++() = 0;
+        Iterator& operator++();
         /**
          * @brief returns the string at the current position in the pointer
          * @virtual 
          */
-        virtual string* operator*() = 0;
+        string& operator*();
         /**
          * @brief returns a boolean depending on whether the value in rhs matches the one in the current position
          * @param rhs The pointer we are using to make the comparision
          * @virtual 
          */
-        virtual bool operator==(const Iterator& rhs) = 0;
+        bool operator==(const Iterator& rhs);
         /**
          * @brief returns a boolean depending on whether the value in rhs doesnt matches the one in the current position
          * @param rhs The pointer we are using to make the comparision
          * @virtual 
          */
-        virtual bool operator!=(const Iterator& rhs)  = 0;
+        bool operator!=(const Iterator& rhs);
 
 };
 
