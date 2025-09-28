@@ -5,13 +5,12 @@
  * @brief Module for managing chat users, message sending/receiving,
  *        and command queue execution.
  */
-#ifndef USER_H
-#define USER_H
+#ifndef USERS_H
+#define USERS_H
 
 #include "ChatRoom.h"
 #include "Command.h"
 #include <string>
-using namespace std;
 
 /**
  * @class Users
@@ -48,7 +47,7 @@ public:
      */
     void send(std::string message, ChatRoom room);
 
-    Users(std::string name,ChatRoom room,Command* commandQueue);
+    Users(std::string& name,ChatRoom* room,Command* commandQueue);
     /**
      * @brief Receives a message from another user in a chat room.
      *

@@ -1,10 +1,11 @@
 #include "Users.h"
 #include "ChatRoom.h"
-#include <string>
-using namespace std;
+#include "Command.h"
+#include <iostream>
 
-
-Users(std::string name, ChatRoom room, Command* commandQueue)
-{
-    this->name = name;
-}
+Users::Users(std::string& name, ChatRoom* chatRoom, Command* commandQueue)
+    {
+        this->name=name;
+        this->chatRoom=chatRoom;
+        this->commandQueue=commandQueue;
+    }
