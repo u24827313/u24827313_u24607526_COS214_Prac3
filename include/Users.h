@@ -10,6 +10,7 @@
 
 #include "ChatRoom.h"
 #include "Command.h"
+#include <queue>
 #include <string>
 
 /**
@@ -36,7 +37,7 @@ protected:
     /**
      * @brief Queue of commands for deferred execution.
      */
-    Command* commandQueue;
+    std::queue<Command*> commandQueue;
 
 public:
     /**
@@ -47,7 +48,7 @@ public:
      */
     void send(std::string message, ChatRoom* room);
 
-    Users(std::string& name,ChatRoom* room,Command* commandQueue);
+    Users(std::string& name,ChatRoom* room);
     /**
      * @brief Receives a message from another user in a chat room.
      *
@@ -55,14 +56,14 @@ public:
      * @param fromUser The user who sent the message.
      * @param room The chat room where the message was sent.
      */
-    void receive(std::string message, Users fromUser, ChatRoom room);
+    void receive(std::string message, Users* fromUser, ChatRoom room);
 
     /**
      * @brief Adds a command to the user's command queue.
      *
      * @param command The command to add to the queue.
      */
-    void addCommand(Command command);
+    void addCommand(Command* command);
 
     /**
      * @brief Executes all commands in the user's command queue.

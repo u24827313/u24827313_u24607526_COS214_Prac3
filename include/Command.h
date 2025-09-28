@@ -27,13 +27,13 @@ class Command
     protected:
         ChatRoom *room; //SHOULD NOT BE POINTER BUT IDK HOW TO FIX FOR NOW . ///< Pointer to the chatroom the command will be executed in
         string message; ///< string representing the message being sent/saved
-        Users fromUser; ///< User sending the message
+        Users* fromUser; ///< User sending the message
     public:
         /**
          * @brief execute the command sent by the invoker
          * @virtual
          */
         virtual void execute()=0;
-        Command(ChatRoom* room, string message, Users fromUser);
+        Command(ChatRoom* room, string message, Users* fromUser);
 };
 #endif

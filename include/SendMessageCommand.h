@@ -16,5 +16,6 @@ class SendMessageCommand: public Command
     */
     public:
         void execute();
+        SendMessageCommand(ChatRoom* room, string message, Users* fromUser);
 };
 #endif;
