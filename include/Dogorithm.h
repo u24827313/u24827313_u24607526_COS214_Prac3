@@ -19,10 +19,12 @@
 class Dogorithm : public ChatRoom
 {
         private:    
-        Users* users; ///< List of Users in the ChatRoom
-        string* chatHistory; ///< Array of pointers with the chat History
+        Users* user; ///< List of Users in the ChatRoom
+        string** chatHistory; ///< Array of pointers with the chat History
 
     public:
+
+        Dogorithm(Users* user, string** chatHistory);
         /**
          * @brief Register a new user in the chat room
          * @param user Pointer to the Users object to register

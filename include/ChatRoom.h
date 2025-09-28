@@ -29,6 +29,8 @@ private:
     std::string* chatHistory;    ///< Pointer to chat history storage
 
 public:
+
+    ChatRoom(Users* user,string** cHistory):users(user),chatHistory(chatHistory){};
     /**
      * @brief Register a new user in the chat room
      * @param user Pointer to the Users object to register
