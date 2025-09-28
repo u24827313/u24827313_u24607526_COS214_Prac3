@@ -56,7 +56,7 @@ public:
      * @param fromUser The user who sent the message.
      * @param room The chat room where the message was sent.
      */
-    void receive(std::string message, Users* fromUser, ChatRoom room);
+    void receive(std::string message, Users* fromUser, ChatRoom* room);
 
     /**
      * @brief Adds a command to the user's command queue.

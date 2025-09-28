@@ -20,17 +20,21 @@ Users::Users(std::string& name, ChatRoom* chatRoom)
 
 }
 
-void Users::addCommand(Command* command){
+void Users::addCommand(Command* command)
+{
     commandQueue.push(command);
 }
 
-void Users::executeAll(){
-    if (commandQueue.empty()) {
+void Users::executeAll()
+{
+    if (commandQueue.empty()) 
+    {
         std::cout << name << "'s command queue is empty." << std::endl;
         return;
     }
 
-    while (!commandQueue.empty()) {
+    while (!commandQueue.empty()) 
+    {
         Command* currentCommand = commandQueue.front();  // Get front command
         
         currentCommand->execute();  // Execute the command
@@ -42,4 +46,17 @@ void Users::executeAll(){
     }
     
     std::cout << "All commands executed successfully." << std::endl;
+}
+
+void Users::receive(std::string message, Users* fromUser, ChatRoom* room)
+{
+    while (!commandQueue.empty())
+    {
+        Command* currCommand = commandQueue.front();
+        if(this->name != fromUser->name)
+        {
+            std::cout<<"You received a new message"<<std::endl;
+        }
+    }
+    
 }
