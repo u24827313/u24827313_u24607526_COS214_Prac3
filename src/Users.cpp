@@ -50,13 +50,6 @@ void Users::executeAll()
 
 void Users::receive(std::string message, Users* fromUser, ChatRoom* room)
 {
-    while (!commandQueue.empty())
-    {
-        Command* currCommand = commandQueue.front();
-        if(this->name != fromUser->name)
-        {
-            std::cout<<"You received a new message"<<std::endl;
-        }
-    }
     
+    std::cout<<"You received a new message from "<< fromUser->getName() << "from the " << room->getName() << " chatRoom!" << std::endl;
 }

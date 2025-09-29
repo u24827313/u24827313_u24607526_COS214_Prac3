@@ -1,27 +1,34 @@
 #include "../include/Iterator.h"
 
-Iterator::Iterator(string** current, string** end){
-    this->current = current;
-    this->end = end;
+Iterator::Iterator(const std::string* s, size_t pos = 0) : str(s), curr_pos(pos) {}
+
+std::string Iterator::operator*(){
+    if (curr_pos >= str->length()) return "";
+        
+    size_t endPos = str->find('\n', curr_pos);
+    if (endPos == std::string::npos) {
+        endPos = str->length();
+    }
+    return str->substr(curr_pos, endPos - curr_pos);
 }
 
-std::string& Iterator::operator*(){
-    if (current == end || *current == nullptr) {
-            throw std::out_of_range("Iterator out of range");
-    }
-    return **current;
-}
 
 Iterator& Iterator::operator++(){
-    Iterator temp = *this;
-    ++(*this);
-    return temp;
+    if (curr_pos < str->length()) {
+            curr_pos = str->find('\n', curr_pos);
+            if (curr_pos == std::string::npos) {
+                curr_pos = str->length();  // Reached end
+            } else {
+                curr_pos++;  // Move past the newline character
+            }
+    }
+    return *this;
 }
 
 bool Iterator::operator==(const Iterator& rhs){
-    return current == rhs.current;
+    return curr_pos == rhs.curr_pos && str == rhs.str;
 }
 
 bool Iterator::operator!=(const Iterator& rhs){
-    return current != rhs.current;
+    return !(*this == rhs);
 }

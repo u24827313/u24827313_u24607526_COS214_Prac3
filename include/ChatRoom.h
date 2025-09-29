@@ -8,9 +8,10 @@
 #ifndef CHATROOM_H
 #define CHATROOM_H
 
-#include "Users.h"
+class Users;
 #include <string>
 #include "Iterator.h"
+#include <queue>
 using namespace std;
 
 /**
@@ -25,12 +26,18 @@ using namespace std;
 class ChatRoom
 {
 private:    
-    Users* users;           ///< Pointer to users collection
-    std::string* chatHistory;    ///< Pointer to chat history storage
-
+    std::queue<Users*> addUser;          ///< Pointer to users collection
+    std::string* chatHistory;   ///< Pointer to chat history storage
+    
 public:
 
-    ChatRoom(Users* user,string** cHistory):users(user),chatHistory(chatHistory){};
+    ChatRoom(std::queue<Users*> users ,string* cHistory):addUser(users),chatHistory(cHistory){
+        
+    };
+
+    virtual ~ChatRoom(){
+        delete chatHistory;
+    }
     /**
      * @brief Register a new user in the chat room
      * @param user Pointer to the Users object to register
@@ -44,7 +51,7 @@ public:
      * @param sender The user sending the message
      * @virtual
      */
-    virtual void sendMessage(std::string message, Users sender) = 0;
+    virtual void sendMessage(std::string message, Users* sender) = 0;
     
     /**
      * @brief Save a message to chat history
@@ -52,21 +59,32 @@ public:
      * @param user The user associated with the message
      * @virtual
      */
-    virtual void saveMesssage(std::string message, Users user) = 0;
+    virtual void saveMessage(std::string message, Users* user) = 0;
     
     /**
      * @brief Remove a user from the chat room
      * @param user The user to remove
      * @virtual
      */
-    virtual void removeUser(Users user) = 0;
+    virtual void removeUser(Users* user) = 0;
     
     /**
      * @brief Create a clone of the chat room
      * @return ChatRoom* Pointer to the cloned chat room instance
      * @virtual
      */
-    virtual void clone() = 0;
+    virtual ChatRoom* clone() = 0;
 
+
+    std::queue<Users*> returnUsers(){
+        return addUser;
+    }
+
+    std::string* returnChat(){
+        return chatHistory;
+    }
+
+    virtual std::string getName() = 0;
+    
 };
 #endif

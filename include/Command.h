@@ -7,7 +7,7 @@
 
 #ifndef COMMAND_H
 #define COMMAND_H
-#include "Users.h"
+class Users;
 #include "ChatRoom.h"
 #include <string>
 using namespace std;

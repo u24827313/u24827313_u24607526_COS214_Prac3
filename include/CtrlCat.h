@@ -7,7 +7,7 @@
 
 
 #ifndef CTRLCAT
-#define CRTLCAT
+#define CTRLCAT
 #include "ChatRoom.h"
 
 /**
@@ -16,14 +16,12 @@
  * @ingroup CtrlCat
  */
 class CtrlCat: public ChatRoom
-{
-    private:    
-        Users* users; ///< List of Users in the ChatRoom
-        string** chatHistory; ///< Array of pointers with the chat History
-        std::queue<Users*> addUser;
+{   
+    private:
+        std::string name;
     public:
 
-        CtrlCat(Users* user,string** chatHistory);
+        CtrlCat(std::queue<Users*> users,string* chatHistory);
         /**
          * @brief Register a new user in the chat room
          * @param user Pointer to the Users object to register
@@ -42,19 +40,21 @@ class CtrlCat: public ChatRoom
          * @param message The message content to save
          * @param user The user associated with the message
          */
-        void saveMesssage(string,Users*);
+        void saveMessage(string,Users*);
 
         /**
          * @brief Remove a user from the chat room
          * @param user The user to remove
          */
-        void removeUser(Users);
+        void removeUser(Users*);
 
         /**
          * @brief Create a clone of the chat room
          * @return ChatRoom* Pointer to the cloned chat room instance
          */
-        void clone();
+        ChatRoom* clone();
+        std::string getName();
+        ~CtrlCat(){}
 
 };
 #endif

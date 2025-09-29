@@ -8,8 +8,8 @@
 #ifndef USERS_H
 #define USERS_H
 
-#include "ChatRoom.h"
-#include "Command.h"
+class ChatRoom;
+class Command;
 #include <queue>
 #include <string>
 
@@ -49,6 +49,10 @@ public:
     void send(std::string message, ChatRoom* room);
 
     Users(std::string& name,ChatRoom* room);
+    
+    ~Users(){
+        delete chatRoom;
+    }
     /**
      * @brief Receives a message from another user in a chat room.
      *
@@ -69,6 +73,10 @@ public:
      * @brief Executes all commands in the user's command queue.
      */
     void executeAll();
+
+    std::string getName(){
+        return name;
+    }
 };
 
 #endif // USER_H
