@@ -1,6 +1,6 @@
 /**
  * @file Users.h
- * @brief Declaration of the Users class and related functionality.
+ * @brief Header file for the Declaration of the Users class and related functionality.
  * @defgroup UserModule User Module
  * @brief Module for managing chat users, message sending/receiving,
  *        and command queue execution.

@@ -53,7 +53,16 @@ class CtrlCat: public ChatRoom
          * @return ChatRoom* Pointer to the cloned chat room instance
          */
         ChatRoom* clone();
+
+        /**
+         * @brief Returns name of User
+         * @return name of the current user Pointer
+         */   
         std::string getName();
+
+        /**
+         * @brief Destructor
+         */
         ~CtrlCat(){}
 
         void getChatLog();
