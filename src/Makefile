@@ -1,5 +1,5 @@
 filesToDelete = TestingMain 
-filesToCompile = TestingMain.cpp BasePizza.cpp BulkDiscount.cpp Customer.cpp Discount.cpp ExtraCheese.cpp FamilyDiscount.cpp Menu.cpp Observer.cpp Order.cpp OrderManager.cpp OrderPlaced.cpp OrderReady.cpp OrderPrep.cpp Pizza.cpp PizzaComponent.cpp PizzaDecorator.cpp PizzaMenu.cpp RegularPrice.cpp SpecialMenu.cpp StuffedCrust.cpp Topping.cpp Website.cpp 
+filesToCompile = TestingMain.cpp ChatRoom.cpp CtrlCat.cpp Dogorithm.cpp Iterator.cpp IWantCatNow.cpp Command.cpp LogMessageCommand.cpp SaveMessageCommand.cpp Meedooww.cpp SillyGoose.cpp Users.cpp 
 filesInCoverageReport = TestingMain
 
 Main:
