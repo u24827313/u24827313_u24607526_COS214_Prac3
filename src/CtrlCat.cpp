@@ -41,7 +41,7 @@ void CtrlCat::removeUser(Users user)
     while(!addUser.empty())//idk what to put here 
     {
         Users* us = addUser.front();
-        if(us == user)// idk
+        //if(user == user)// idk
         {
             addUser.pop();
         }
