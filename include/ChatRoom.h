@@ -31,6 +31,12 @@ private:
     
 public:
 
+    /**
+     * @brief Constructor for the ChatRoom class
+     * @param users queue of all the users of the particular chatRoom
+     * @param cHistory string pointer of all the messages in the 
+     * @virtual
+     */
     ChatRoom(std::queue<Users*> users ,string* cHistory):addUser(users),chatHistory(cHistory){
         
     };
