@@ -20,6 +20,7 @@ class CtrlCat: public ChatRoom
     private:    
         Users* users; ///< List of Users in the ChatRoom
         string** chatHistory; ///< Array of pointers with the chat History
+        std::queue<Users*> addUser;
     public:
 
         CtrlCat(Users* user,string** chatHistory);
@@ -34,14 +35,14 @@ class CtrlCat: public ChatRoom
          * @param message The message content to send
          * @param sender The user sending the message
          */
-        void sendMessage(string,Users);
+        void sendMessage(string,Users*);
 
         /**
          * @brief Save a message to chat history
          * @param message The message content to save
          * @param user The user associated with the message
          */
-        void saveMesssage(string,Users);
+        void saveMesssage(string,Users*);
 
         /**
          * @brief Remove a user from the chat room
