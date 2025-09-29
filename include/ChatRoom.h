@@ -25,8 +25,9 @@ using namespace std;
  */
 class ChatRoom
 {
-private:    
-    std::queue<Users*> addUser;          ///< Pointer to users collection
+protected:
+    std::queue<Users*> addUser; ///< Pointer to users collection
+private:              
     std::string* chatHistory;   ///< Pointer to chat history storage
     
 public:
@@ -80,6 +81,8 @@ public:
      * @virtual
      */
     virtual ChatRoom* clone() = 0;
+
+    virtual void getChatLog() = 0;
 
 
     std::queue<Users*> returnUsers(){

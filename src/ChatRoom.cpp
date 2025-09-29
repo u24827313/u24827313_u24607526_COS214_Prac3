@@ -1,5 +1,5 @@
 #include "../include/ChatRoom.h"
-#include "Users.h"
-#include "Command.h"
+#include "../include/Users.h"
+#include "../include/Command.h"
 #include <iostream>
 

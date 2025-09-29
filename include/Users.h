@@ -27,7 +27,7 @@ protected:
     /**
      * @brief Pointer to the chat room this user is associated with.
      */
-    ChatRoom* chatRoom;
+    std::queue<ChatRoom*> chatRoom;
 
     /**
      * @brief The name of the user.
@@ -48,11 +48,9 @@ public:
      */
     void send(std::string message, ChatRoom* room);
 
-    Users(std::string& name,ChatRoom* room);
+    Users(std::string& name);
     
-    ~Users(){
-        delete chatRoom;
-    }
+    virtual ~Users();
     /**
      * @brief Receives a message from another user in a chat room.
      *
@@ -73,6 +71,12 @@ public:
      * @brief Executes all commands in the user's command queue.
      */
     void executeAll();
+
+    void getChatLog(ChatRoom* room);
+
+    void addChatRoom(ChatRoom* chat){
+        chatRoom.push(chat);
+    }
 
     std::string getName(){
         return name;

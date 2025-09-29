@@ -1,6 +1,6 @@
 #include "../include/Iterator.h"
 
-Iterator::Iterator(const std::string* s, size_t pos = 0) : str(s), curr_pos(pos) {}
+Iterator::Iterator(const std::string* s, size_t pos) : str(s), curr_pos(pos) {}
 
 std::string Iterator::operator*(){
     if (curr_pos >= str->length()) return "";

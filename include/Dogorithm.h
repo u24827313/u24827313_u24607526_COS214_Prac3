@@ -57,5 +57,10 @@ class Dogorithm : public ChatRoom
         ChatRoom* clone();
         std::string getName();
         ~Dogorithm(){}
+
+        void getChatLog();
+
+        Iterator begin();
+        Iterator end();
 };
 #endif

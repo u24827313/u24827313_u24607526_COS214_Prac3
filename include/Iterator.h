@@ -32,7 +32,7 @@ class Iterator{
          * @param curr Current position in the chatHistory
          * @param end Last position in the chatHistory
          */
-        Iterator(const std::string* s, size_t pos = 0) {}
+        Iterator(const std::string* s, size_t pos = 0);
 
         /**
          * @brief goes to the next pointer in the chatHistory

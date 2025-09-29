@@ -1,4 +1,4 @@
-#include "LogMessageCommand.h"
+#include "../include/LogMessageCommand.h"
 
 LogMessageCommand::LogMessageCommand(ChatRoom* room, string message, Users* fromUser): Command(room, message, fromUser){
 

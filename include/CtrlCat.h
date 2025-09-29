@@ -56,5 +56,9 @@ class CtrlCat: public ChatRoom
         std::string getName();
         ~CtrlCat(){}
 
+        void getChatLog();
+        Iterator begin();
+        Iterator end();
+
 };
 #endif

@@ -1,8 +1,8 @@
 #include "../include/ChatRoom.h"
-#include "Users.h"
-#include "Command.h"
-#include "Iterator.h"
-#include "CtrlCat.h"
+#include "../include/Users.h"
+#include "../include/Command.h"
+#include "../include/Iterator.h"
+#include "../include/CtrlCat.h"
 #include <iostream>
 #include <queue>
 
@@ -12,14 +12,31 @@ CtrlCat::CtrlCat(std::queue<Users*> users,string* chatHistory):ChatRoom(users,ch
 }
 
 void CtrlCat::registerUser(Users* user)
-{
-    returnUsers().push(user);
+{   
+    bool isRegistered = false;
+    std::queue<Users*> tempQueue1 = addUser;  // make a copy for searching
+    
+    while (!tempQueue1.empty()) {
+        if (tempQueue1.front() == user) {
+            isRegistered = true;
+            break;
+        }
+        tempQueue1.pop();
+    }
+
+    if (isRegistered) {
+        std::cout << user->getName() << " is already registered!" << std::endl;
+        return;
+    }
+
+    addUser.push(user);
+    user->addChatRoom(this);
+    std::cout << "You have successfully been added  the chatRoom!" << std::endl;
 }
 
 void CtrlCat::sendMessage(std::string message,Users* user)
-{
-    std::cout<<"message sent from" << user->getName() << std::endl;
-    std::queue<Users*> tempQueue = returnUsers();
+{   
+    std::queue<Users*> tempQueue = addUser;
     
     // Loop through all users in the queue
     while (!tempQueue.empty()) 
@@ -44,19 +61,35 @@ void CtrlCat::saveMessage(std::string message,Users* user)
     if(returnChat()!=nullptr)
 
     {   
-        std::string all = message + " sent by  " + user->getName();
-        (returnChat())->append(message).append("\n");
+        std::string all = message + " :sent by  " + user->getName();
+        (returnChat())->append(all).append("\n");
     }
 }
 
 void CtrlCat::removeUser(Users* user)
 {
+    bool isRegistered = false;
+    std::queue<Users*> tempQueue1 = addUser;  // make a copy for searching
+    
+    while (!tempQueue1.empty()) {
+        if (tempQueue1.front() == user) {
+            isRegistered = true;
+            break;
+        }
+        tempQueue1.pop();
+    }
+
+    if (!isRegistered) {
+        std::cout << user->getName() << " is not part of this chat room and cannot send messages!" << std::endl;
+        return;
+    }
+
     std::queue<Users*> tempQueue;
     
-    while(!returnUsers().empty())
+    while(!addUser.empty())
     {
-        Users* us = returnUsers().front();
-        returnUsers().pop();
+        Users* us = addUser.front();
+        addUser.pop();
         
         if(us != user)  // Keep users that are NOT the one to remove
         {
@@ -67,9 +100,10 @@ void CtrlCat::removeUser(Users* user)
     // Restore the queue without the removed user
     while(!tempQueue.empty())
     {
-        returnUsers().push(tempQueue.front());
+        addUser.push(tempQueue.front());
         tempQueue.pop();
     }
+    std::cout << "You have successfully left the chat!" << std::endl;
 }
 
 ChatRoom* CtrlCat::clone()
@@ -83,6 +117,21 @@ ChatRoom* CtrlCat::clone()
 
 std::string CtrlCat::getName(){
     return name;
+}
+
+Iterator CtrlCat::begin() {
+    return Iterator(returnChat(), 0);
+}
+
+Iterator CtrlCat::end() {
+    return Iterator(returnChat(), returnChat()->length());
+}
+
+void CtrlCat::getChatLog(){
+    std::cout << "The entire Chat Log for the " << name << " chatRoom" << std::endl;
+    for (Iterator it = begin(); it != end(); ++it) {
+        std::cout << *it << std::endl;
+    }
 }
 
 

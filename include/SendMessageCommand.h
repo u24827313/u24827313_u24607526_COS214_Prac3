@@ -18,4 +18,4 @@ class SendMessageCommand: public Command
         void execute();
         SendMessageCommand(ChatRoom* room, string message, Users* fromUser);
 };
-#endif;
+#endif

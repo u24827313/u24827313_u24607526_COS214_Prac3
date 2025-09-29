@@ -1,5 +1,5 @@
 filesToDelete = TestingMain 
-filesToCompile = TestingMain.cpp ChatRoom.cpp CtrlCat.cpp Dogorithm.cpp Iterator.cpp IWantCatNow.cpp Command.cpp LogMessageCommand.cpp SaveMessageCommand.cpp Meedooww.cpp SillyGoose.cpp Users.cpp 
+filesToCompile = TestingMain.cpp ChatRoom.cpp CtrlCat.cpp Dogorithm.cpp Iterator.cpp IWantCatNow.cpp Command.cpp LogMessageCommand.cpp SendMessageCommand.cpp Meeoow.cpp SillyGoose.cpp Users.cpp GetChatLogCommand.cpp
 filesInCoverageReport = TestingMain
 
 Main:
