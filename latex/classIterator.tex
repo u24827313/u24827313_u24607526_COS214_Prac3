@@ -1,0 +1,105 @@
+\hypertarget{classIterator}{}\doxysection{Iterator Class Reference}
+\label{classIterator}\index{Iterator@{Iterator}}
+
+
+Represents a a pointer iterating through chat\+History.  
+
+
+
+
+{\ttfamily \#include $<$Iterator.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIterator_a917bec0dad46ef10d9793ab1a23c38da}{Iterator}} (const std\+::string $\ast$s, size\+\_\+t pos=0)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classIterator}{Iterator}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIterator}{Iterator}} \& \mbox{\hyperlink{classIterator_a5d559abe6ee19ebfa95fb61d80218504}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em goes to the next pointer in the chat\+History @virtual \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classIterator_a9909156b6ca5ab80a6db89d67295877b}{operator$\ast$}} ()
+\begin{DoxyCompactList}\small\item\em returns the string at the current position in the pointer @virtual \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classIterator_ad886bb2a13297190746b41285638bbb9}{operator==}} (const \mbox{\hyperlink{classIterator}{Iterator}} \&rhs)
+\begin{DoxyCompactList}\small\item\em returns a boolean depending on whether the value in rhs matches the one in the current position \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classIterator_ad2dc98bceda6d50ac2bb71bfd26b1a96}{operator!=}} (const \mbox{\hyperlink{classIterator}{Iterator}} \&rhs)
+\begin{DoxyCompactList}\small\item\em returns a boolean depending on whether the value in rhs doesnt matches the one in the current position \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a a pointer iterating through chat\+History. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIterator_a917bec0dad46ef10d9793ab1a23c38da}\label{classIterator_a917bec0dad46ef10d9793ab1a23c38da}} 
+\index{Iterator@{Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}}
+{\footnotesize\ttfamily Iterator\+::\+Iterator (\begin{DoxyParamCaption}\item[{const std\+::string $\ast$}]{s,  }\item[{size\+\_\+t}]{pos = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classIterator}{Iterator}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curr} & Current position in the chat\+History \\
+\hline
+{\em end} & Last position in the chat\+History \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIterator_ad2dc98bceda6d50ac2bb71bfd26b1a96}\label{classIterator_ad2dc98bceda6d50ac2bb71bfd26b1a96}} 
+\index{Iterator@{Iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIterator}{Iterator}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+returns a boolean depending on whether the value in rhs doesnt matches the one in the current position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The pointer we are using to make the comparision @virtual \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIterator_a9909156b6ca5ab80a6db89d67295877b}\label{classIterator_a9909156b6ca5ab80a6db89d67295877b}} 
+\index{Iterator@{Iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily string Iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the string at the current position in the pointer @virtual 
+
+\mbox{\Hypertarget{classIterator_a5d559abe6ee19ebfa95fb61d80218504}\label{classIterator_a5d559abe6ee19ebfa95fb61d80218504}} 
+\index{Iterator@{Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIterator}{Iterator}}\& Iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+goes to the next pointer in the chat\+History @virtual 
+
+\mbox{\Hypertarget{classIterator_ad886bb2a13297190746b41285638bbb9}\label{classIterator_ad886bb2a13297190746b41285638bbb9}} 
+\index{Iterator@{Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!Iterator@{Iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIterator}{Iterator}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+returns a boolean depending on whether the value in rhs matches the one in the current position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & The pointer we are using to make the comparision @virtual \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Iterator_8h}{Iterator.\+h}}\end{DoxyCompactItemize}

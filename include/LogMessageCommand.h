@@ -22,6 +22,18 @@ class LogMessageCommand: public Command
          * @brief Log the message ent by the User(Invoker)
          */
         void execute();
+        /**
+         * @brief LogMessageCommand constructor
+         * @param room which room is the command coming from
+         * @param message The message being sent by the user
+         * @param fromUser which user is sending the message
+         */
+        LogMessageCommand(ChatRoom* room, string message, Users* fromUser);
+        /**
+         * @brief Deconstructor
+         * @virtual
+         */
+        ~LogMessageCommand();
 };
 
 #endif

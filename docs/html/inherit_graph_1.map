@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classCommand.html" title="Abstract base class representing the commands to be executed." alt="" coords="5,56,95,83"/>
+<area shape="rect" id="node2" href="$classGetChatLogCommand.html" title="Child class of Command." alt="" coords="149,5,315,32"/>
+<area shape="rect" id="node3" href="$classLogMessageCommand.html" title="Child class of Command." alt="" coords="147,56,317,83"/>
+<area shape="rect" id="node4" href="$classSendMessageCommand.html" title="Child class of Command." alt="" coords="143,107,321,133"/>
+</map>

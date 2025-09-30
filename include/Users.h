@@ -1,6 +1,6 @@
 /**
  * @file Users.h
- * @brief Declaration of the Users class and related functionality.
+ * @brief Header file for the Declaration of the Users class and related functionality.
  * @defgroup UserModule User Module
  * @brief Module for managing chat users, message sending/receiving,
  *        and command queue execution.
@@ -8,8 +8,9 @@
 #ifndef USERS_H
 #define USERS_H
 
-#include "ChatRoom.h"
-#include "Command.h"
+class ChatRoom;
+class Command;
+#include <queue>
 #include <string>
 
 /**
@@ -26,7 +27,7 @@ protected:
     /**
      * @brief Pointer to the chat room this user is associated with.
      */
-    ChatRoom* chatRoom;
+    std::queue<ChatRoom*> chatRoom;
 
     /**
      * @brief The name of the user.
@@ -36,7 +37,7 @@ protected:
     /**
      * @brief Queue of commands for deferred execution.
      */
-    Command* commandQueue;
+    std::queue<Command*> commandQueue;
 
 public:
     /**
@@ -45,9 +46,18 @@ public:
      * @param message The message content to send.
      * @param room The chat room to which the message is sent.
      */
-    void send(std::string message, ChatRoom room);
+    void send(std::string message, ChatRoom* room);
 
-    Users(std::string& name,ChatRoom* room,Command* commandQueue);
+    /**
+     * @brief User Constructor
+     * @param name string of user's name
+     */
+    Users(std::string& name);
+    
+    /**
+     * @brief User Decostructor
+     */
+    virtual ~Users();
     /**
      * @brief Receives a message from another user in a chat room.
      *
@@ -55,19 +65,29 @@ public:
      * @param fromUser The user who sent the message.
      * @param room The chat room where the message was sent.
      */
-    void receive(std::string message, Users fromUser, ChatRoom room);
+    void receive(std::string message, Users* fromUser, ChatRoom* room);
 
     /**
      * @brief Adds a command to the user's command queue.
      *
      * @param command The command to add to the queue.
      */
-    void addCommand(Command command);
+    void addCommand(Command* command);
 
     /**
      * @brief Executes all commands in the user's command queue.
      */
     void executeAll();
+
+    void getChatLog(ChatRoom* room);
+
+    void addChatRoom(ChatRoom* chat){
+        chatRoom.push(chat);
+    }
+
+    std::string getName(){
+        return name;
+    }
 };
 
 #endif // USER_H

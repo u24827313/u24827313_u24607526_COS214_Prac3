@@ -19,43 +19,43 @@ using namespace std;
 class Iterator{ 
     private:
         /**
-         * @brief Pointer to current position in the chatRoom
+         * @brief Pointer to the chatRoom string
          */
-        std::string** current;
+        const std::string* str;
         /**
-         * @brief Pointer to last position in the chatRoom
+         * @brief current position in the string
          */
-        std::string** end;
+        size_t curr_pos;
     public:
         /**
          * @brief Iterator constructor
          * @param curr Current position in the chatHistory
          * @param end Last position in the chatHistory
          */
-        Iterator(string**, string**);
+        Iterator(const std::string* s, size_t pos = 0);
 
         /**
          * @brief goes to the next pointer in the chatHistory
          * @virtual 
          */
-        virtual Iterator& operator++() = 0;
+        Iterator& operator++();
         /**
          * @brief returns the string at the current position in the pointer
          * @virtual 
          */
-        virtual string* operator*() = 0;
+        string operator*();
         /**
          * @brief returns a boolean depending on whether the value in rhs matches the one in the current position
          * @param rhs The pointer we are using to make the comparision
          * @virtual 
          */
-        virtual bool operator==(const Iterator& rhs) = 0;
+        bool operator==(const Iterator& rhs);
         /**
          * @brief returns a boolean depending on whether the value in rhs doesnt matches the one in the current position
          * @param rhs The pointer we are using to make the comparision
          * @virtual 
          */
-        virtual bool operator!=(const Iterator& rhs)  = 0;
+        bool operator!=(const Iterator& rhs);
 
 };
 

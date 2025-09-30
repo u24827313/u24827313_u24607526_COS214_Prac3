@@ -8,8 +8,10 @@
 #ifndef CHATROOM_H
 #define CHATROOM_H
 
-#include "Users.h"
+class Users;
 #include <string>
+#include "Iterator.h"
+#include <queue>
 using namespace std;
 
 /**
@@ -23,11 +25,26 @@ using namespace std;
  */
 class ChatRoom
 {
-private:    
-    Users* users;           ///< Pointer to users collection
-    std::string* chatHistory;    ///< Pointer to chat history storage
-
+protected:
+    std::queue<Users*> addUser; ///< Pointer to users collection
+private:              
+    std::string* chatHistory;   ///< Pointer to chat history storage
+    
 public:
+
+    /**
+     * @brief Constructor for the ChatRoom class
+     * @param users queue of all the users of the particular chatRoom
+     * @param cHistory string pointer of all the messages in the 
+     * @virtual
+     */
+    ChatRoom(std::queue<Users*> users ,string* cHistory):addUser(users),chatHistory(cHistory){
+        
+    };
+
+    virtual ~ChatRoom(){
+        delete chatHistory;
+    }
     /**
      * @brief Register a new user in the chat room
      * @param user Pointer to the Users object to register
@@ -41,7 +58,7 @@ public:
      * @param sender The user sending the message
      * @virtual
      */
-    virtual void sendMessage(std::string message, Users sender) = 0;
+    virtual void sendMessage(std::string message, Users* sender) = 0;
     
     /**
      * @brief Save a message to chat history
@@ -49,21 +66,47 @@ public:
      * @param user The user associated with the message
      * @virtual
      */
-    virtual void saveMesssage(std::string message, Users user) = 0;
+    virtual void saveMessage(std::string message, Users* user) = 0;
     
     /**
      * @brief Remove a user from the chat room
      * @param user The user to remove
      * @virtual
      */
-    virtual void removeUser(Users user) = 0;
+    virtual void removeUser(Users* user) = 0;
     
     /**
      * @brief Create a clone of the chat room
      * @return ChatRoom* Pointer to the cloned chat room instance
      * @virtual
      */
-    virtual void clone() = 0;
+    virtual ChatRoom* clone() = 0;
 
+
+    /**
+     * @brief prints out all the chats sent by all the users
+     * @virtual
+     */
+    virtual void getChatLog() = 0;
+
+
+
+    /**
+     * @brief returns chatHistory
+     * @return ChatRoom* Pointer 
+     * @virtual
+     */
+    std::string* returnChat(){
+        return chatHistory;
+    }
+
+
+    /**
+     * @brief returns the name of the ChatRoom
+     * @return string
+     * @virtual
+     */
+    virtual std::string getName() = 0;
+    
 };
 #endif

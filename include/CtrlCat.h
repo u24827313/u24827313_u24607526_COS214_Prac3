@@ -7,7 +7,7 @@
 
 
 #ifndef CTRLCAT
-#define CRTLCAT
+#define CTRLCAT
 #include "ChatRoom.h"
 
 /**
@@ -16,11 +16,17 @@
  * @ingroup CtrlCat
  */
 class CtrlCat: public ChatRoom
-{
-    private:    
-        Users* users; ///< List of Users in the ChatRoom
-        string** chatHistory; ///< Array of pointers with the chat History
-    public:
+{   
+    private:
+        std::string name;
+    public: 
+
+        /**
+         * @brief CtrlCat constructor
+         * @param user queue of users
+         * @param chatHistory all the chatLogs
+         */
+        CtrlCat(std::queue<Users*> users,string* chatHistory);
         /**
          * @brief Register a new user in the chat room
          * @param user Pointer to the Users object to register
@@ -32,26 +38,53 @@ class CtrlCat: public ChatRoom
          * @param message The message content to send
          * @param sender The user sending the message
          */
-        void sendMessage(string,Users);
+        void sendMessage(string,Users*);
 
         /**
          * @brief Save a message to chat history
          * @param message The message content to save
          * @param user The user associated with the message
          */
-        void saveMesssage(string,Users);
+        void saveMessage(string,Users*);
 
         /**
          * @brief Remove a user from the chat room
          * @param user The user to remove
          */
-        void removeUser(Users);
+        void removeUser(Users*);
 
         /**
          * @brief Create a clone of the chat room
          * @return ChatRoom* Pointer to the cloned chat room instance
          */
-        void clone();
+        ChatRoom* clone();
+
+        /**
+         * @brief Returns name of User
+         * @return string which is the name of the pointer
+         */   
+        std::string getName();
+
+        /**
+         * @brief Destructor
+         */
+        ~CtrlCat(){}
+
+        /**
+         * @brief prints out the chatLog of the CtrlCat chatRoom
+         */  
+        void getChatLog();
+
+        /**
+         * @brief returns the iterator at the beginning of the chatHistory pointer
+         * @return Iterator
+         */  
+        Iterator begin();
+        /**
+         * @brief returns the iterator at the end of the chatHistory pointer
+         * @return Iterator
+         */
+        Iterator end();
 
 };
 #endif

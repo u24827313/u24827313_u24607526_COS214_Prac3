@@ -7,7 +7,7 @@
 
 #ifndef COMMAND_H
 #define COMMAND_H
-#include "Users.h"
+class Users;
 #include "ChatRoom.h"
 #include <string>
 using namespace std;
@@ -27,12 +27,24 @@ class Command
     protected:
         ChatRoom *room; //SHOULD NOT BE POINTER BUT IDK HOW TO FIX FOR NOW . ///< Pointer to the chatroom the command will be executed in
         string message; ///< string representing the message being sent/saved
-        Users fromUser; ///< User sending the message
+        Users* fromUser; ///< User sending the message
     public:
         /**
          * @brief execute the command sent by the invoker
          * @virtual
          */
         virtual void execute()=0;
+        /**
+         * @brief Command constructor
+         * @param room which room is the command coming from
+         * @param message The message being sent by the user
+         * @param fromUser which user is sending the message
+         */
+        Command(ChatRoom* room, string message, Users* fromUser):room(room),message(message),fromUser(fromUser){};
+        /**
+         * @brief deconstructor
+         * @virtual
+         */
+        virtual ~Command(){}
 };
 #endif

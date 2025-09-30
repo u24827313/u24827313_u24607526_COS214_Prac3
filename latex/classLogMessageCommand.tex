@@ -1,0 +1,86 @@
+\hypertarget{classLogMessageCommand}{}\doxysection{Log\+Message\+Command Class Reference}
+\label{classLogMessageCommand}\index{LogMessageCommand@{LogMessageCommand}}
+
+
+Child class of \mbox{\hyperlink{classCommand}{Command}}.  
+
+
+
+
+{\ttfamily \#include $<$Log\+Message\+Command.\+h$>$}
+
+
+
+Inheritance diagram for Log\+Message\+Command\+:
+% FIG 0
+
+
+Collaboration diagram for Log\+Message\+Command\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLogMessageCommand_a3be555c3679074b6644bc058fbc6c683}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Log the message ent by the User(\+Invoker) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLogMessageCommand_ae0a3edb267e18f97b9a669a39ad9346e}{Log\+Message\+Command}} (\mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$\mbox{\hyperlink{classCommand_ac38d7713bb9660a23a752a2a2c938dd5}{room}}, string \mbox{\hyperlink{classCommand_a21dc372c4c13f6c1fc91751b8d94c916}{message}}, \mbox{\hyperlink{classUsers}{Users}} $\ast$\mbox{\hyperlink{classCommand_afaaac0a861b0632822721717a8b833eb}{from\+User}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classLogMessageCommand}{Log\+Message\+Command}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLogMessageCommand_a630ee0546c550a9f3e625dc5338c56ad}{$\sim$\+Log\+Message\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Deconstructor @virtual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Child class of \mbox{\hyperlink{classCommand}{Command}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLogMessageCommand_ae0a3edb267e18f97b9a669a39ad9346e}\label{classLogMessageCommand_ae0a3edb267e18f97b9a669a39ad9346e}} 
+\index{LogMessageCommand@{LogMessageCommand}!LogMessageCommand@{LogMessageCommand}}
+\index{LogMessageCommand@{LogMessageCommand}!LogMessageCommand@{LogMessageCommand}}
+\doxysubsubsection{\texorpdfstring{LogMessageCommand()}{LogMessageCommand()}}
+{\footnotesize\ttfamily Log\+Message\+Command\+::\+Log\+Message\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$}]{room,  }\item[{string}]{message,  }\item[{\mbox{\hyperlink{classUsers}{Users}} $\ast$}]{from\+User }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classLogMessageCommand}{Log\+Message\+Command}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & which room is the command coming from \\
+\hline
+{\em message} & The message being sent by the user \\
+\hline
+{\em from\+User} & which user is sending the message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLogMessageCommand_a630ee0546c550a9f3e625dc5338c56ad}\label{classLogMessageCommand_a630ee0546c550a9f3e625dc5338c56ad}} 
+\index{LogMessageCommand@{LogMessageCommand}!````~LogMessageCommand@{$\sim$LogMessageCommand}}
+\index{````~LogMessageCommand@{$\sim$LogMessageCommand}!LogMessageCommand@{LogMessageCommand}}
+\doxysubsubsection{\texorpdfstring{$\sim$LogMessageCommand()}{~LogMessageCommand()}}
+{\footnotesize\ttfamily Log\+Message\+Command\+::$\sim$\+Log\+Message\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deconstructor @virtual. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLogMessageCommand_a3be555c3679074b6644bc058fbc6c683}\label{classLogMessageCommand_a3be555c3679074b6644bc058fbc6c683}} 
+\index{LogMessageCommand@{LogMessageCommand}!execute@{execute}}
+\index{execute@{execute}!LogMessageCommand@{LogMessageCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Log\+Message\+Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Log the message ent by the User(\+Invoker) 
+
+
+
+Implements \mbox{\hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{LogMessageCommand_8h}{Log\+Message\+Command.\+h}}\end{DoxyCompactItemize}
