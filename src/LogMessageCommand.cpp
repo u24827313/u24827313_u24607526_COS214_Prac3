@@ -7,3 +7,8 @@ LogMessageCommand::LogMessageCommand(ChatRoom* room, string message, Users* from
 void LogMessageCommand::execute(){
     room->saveMessage(message, fromUser);
 }
+
+LogMessageCommand::~LogMessageCommand()
+{
+    
+}
