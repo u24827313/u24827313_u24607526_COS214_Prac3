@@ -1,0 +1,4 @@
+<map id="LogMessageCommand" name="LogMessageCommand">
+<area shape="rect" id="node1" title="Child class of Command." alt="" coords="5,189,212,296"/>
+<area shape="rect" id="node2" href="$classCommand.html" title="Abstract base class representing the commands to be executed." alt="" coords="46,5,171,141"/>
+</map>

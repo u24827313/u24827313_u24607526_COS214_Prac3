@@ -18,7 +18,14 @@
 
 class SillyGoose: public Users{
     public:
+        /**
+         * @brief SillyGoose Constructor
+         * @param name string of the the user's name
+         */
         SillyGoose(std::string name ):Users(name){}
+        /**
+         * @brief SillyGoose Deconstructor
+         */
         ~SillyGoose(){}
 };
 #endif

@@ -1,0 +1,24 @@
+\hypertarget{ChatRoom_8h}{}\doxysection{include/\+Chat\+Room.h File Reference}
+\label{ChatRoom_8h}\index{include/ChatRoom.h@{include/ChatRoom.h}}
+
+
+Header file for the \mbox{\hyperlink{classChatRoom}{Chat\+Room}} abstract base class.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}Iterator.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+Include dependency graph for Chat\+Room.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classChatRoom}{Chat\+Room}}
+\begin{DoxyCompactList}\small\item\em Abstract base class representing a chat room interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the \mbox{\hyperlink{classChatRoom}{Chat\+Room}} abstract base class. 
+

@@ -82,17 +82,30 @@ public:
      */
     virtual ChatRoom* clone() = 0;
 
+
+    /**
+     * @brief prints out all the chats sent by all the users
+     * @virtual
+     */
     virtual void getChatLog() = 0;
 
 
-    std::queue<Users*> returnUsers(){
-        return addUser;
-    }
 
+    /**
+     * @brief returns chatHistory
+     * @return ChatRoom* Pointer 
+     * @virtual
+     */
     std::string* returnChat(){
         return chatHistory;
     }
 
+
+    /**
+     * @brief returns the name of the ChatRoom
+     * @return string
+     * @virtual
+     */
     virtual std::string getName() = 0;
     
 };

@@ -18,7 +18,14 @@
  */
 class IwantCatNow: public Users{
     public:
+        /**
+         * @brief IwantCatNow Constructor
+         * @param name string of the the user's name
+         */
         IwantCatNow(std::string name ):Users(name){}
+        /**
+         * @brief IwantCatNow decostructor
+         */
         ~IwantCatNow(){}
 };
 #endif

@@ -1,0 +1,10 @@
+<map id="include/Iterator.h" name="include/Iterator.h">
+<area shape="rect" id="node1" title="Declaration of the Iterator class and related functionality." alt="" coords="473,5,605,32"/>
+<area shape="rect" id="node2" href="$ChatRoom_8h.html" title="Header file for the ChatRoom abstract base class." alt="" coords="463,80,616,107"/>
+<area shape="rect" id="node3" href="$Command_8h.html" title="Header file for the Command abstract base class." alt="" coords="298,155,450,181"/>
+<area shape="rect" id="node7" href="$CtrlCat_8h.html" title=" " alt="" coords="474,155,605,181"/>
+<area shape="rect" id="node8" href="$Dogorithm_8h.html" title="Header file for the Dogorithm class." alt="" coords="629,155,783,181"/>
+<area shape="rect" id="node4" href="$GetChatLogCommand_8h.html" title=" " alt="" coords="5,229,233,256"/>
+<area shape="rect" id="node5" href="$LogMessageCommand_8h.html" title="Header file for the LogMessage class." alt="" coords="257,229,491,256"/>
+<area shape="rect" id="node6" href="$SendMessageCommand_8h.html" title=" " alt="" coords="515,229,758,256"/>
+</map>

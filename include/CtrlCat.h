@@ -19,8 +19,13 @@ class CtrlCat: public ChatRoom
 {   
     private:
         std::string name;
-    public:
+    public: 
 
+        /**
+         * @brief CtrlCat constructor
+         * @param user queue of users
+         * @param chatHistory all the chatLogs
+         */
         CtrlCat(std::queue<Users*> users,string* chatHistory);
         /**
          * @brief Register a new user in the chat room
@@ -56,7 +61,7 @@ class CtrlCat: public ChatRoom
 
         /**
          * @brief Returns name of User
-         * @return name of the current user Pointer
+         * @return string which is the name of the pointer
          */   
         std::string getName();
 
@@ -65,8 +70,20 @@ class CtrlCat: public ChatRoom
          */
         ~CtrlCat(){}
 
+        /**
+         * @brief prints out the chatLog of the CtrlCat chatRoom
+         */  
         void getChatLog();
+
+        /**
+         * @brief returns the iterator at the beginning of the chatHistory pointer
+         * @return Iterator
+         */  
         Iterator begin();
+        /**
+         * @brief returns the iterator at the end of the chatHistory pointer
+         * @return Iterator
+         */
         Iterator end();
 
 };

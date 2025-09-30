@@ -34,6 +34,17 @@ class Command
          * @virtual
          */
         virtual void execute()=0;
+        /**
+         * @brief Command constructor
+         * @param room which room is the command coming from
+         * @param message The message being sent by the user
+         * @param fromUser which user is sending the message
+         */
         Command(ChatRoom* room, string message, Users* fromUser):room(room),message(message),fromUser(fromUser){};
+        /**
+         * @brief deconstructor
+         * @virtual
+         */
+        virtual ~Command(){}
 };
 #endif

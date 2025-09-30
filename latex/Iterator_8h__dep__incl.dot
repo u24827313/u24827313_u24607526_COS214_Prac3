@@ -1,0 +1,21 @@
+digraph "include/Iterator.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="include/Iterator.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Declaration of the Iterator class and related functionality."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="include/ChatRoom.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ChatRoom_8h.html",tooltip="Header file for the ChatRoom abstract base class."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="include/Command.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Command_8h.html",tooltip="Header file for the Command abstract base class."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="include/GetChatLogCommand.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$GetChatLogCommand_8h.html",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="include/LogMessageCommand.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$LogMessageCommand_8h.html",tooltip="Header file for the LogMessage class."];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="include/SendMessageCommand.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$SendMessageCommand_8h.html",tooltip=" "];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="include/CtrlCat.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$CtrlCat_8h.html",tooltip=" "];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="include/Dogorithm.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Dogorithm_8h.html",tooltip="Header file for the Dogorithm class."];
+}

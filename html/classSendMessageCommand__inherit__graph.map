@@ -1,0 +1,4 @@
+<map id="SendMessageCommand" name="SendMessageCommand">
+<area shape="rect" id="node1" title="Child class of Command." alt="" coords="5,189,209,281"/>
+<area shape="rect" id="node2" href="$classCommand.html" title="Abstract base class representing the commands to be executed." alt="" coords="45,5,170,141"/>
+</map>
