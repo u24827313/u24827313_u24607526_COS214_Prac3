@@ -1,0 +1,4 @@
+<map id="Dogorithm" name="Dogorithm">
+<area shape="rect" id="node1" title="Child class of ChatRoom." alt="" coords="5,277,141,501"/>
+<area shape="rect" id="node2" href="$classChatRoom.html" title="Abstract base class representing a chat room interface." alt="" coords="5,5,141,229"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classChatRoom.html" title="Abstract base class representing a chat room interface." alt="" coords="5,31,96,57"/>
+<area shape="rect" id="node2" href="$classCtrlCat.html" title="Child class of ChatRoom." alt="" coords="156,5,223,32"/>
+<area shape="rect" id="node3" href="$classDogorithm.html" title="Child class of ChatRoom." alt="" coords="144,56,235,83"/>
+</map>

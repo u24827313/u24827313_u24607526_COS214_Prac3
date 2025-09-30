@@ -6,6 +6,11 @@
 #include "../include/Meeoow.h"
 #include "../include/IwantCatNow.h"
 
+/**
+ * @brief Main function demonstrating the user and ChatRoom capabilities
+ * @return Exit status
+ */
+
 int main(){
     std::queue<Users*> users;
     std::string* chatHistory1 = new std::string();
@@ -49,6 +54,9 @@ int main(){
     delete user1;
     delete user2;
     delete user3;
+    delete copycat;
+    delete catRoom;
+    delete dogRoom;
 
 
 

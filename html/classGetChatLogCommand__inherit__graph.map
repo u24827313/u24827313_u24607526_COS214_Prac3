@@ -1,0 +1,4 @@
+<map id="GetChatLogCommand" name="GetChatLogCommand">
+<area shape="rect" id="node1" title="Child class of Command." alt="" coords="5,189,196,281"/>
+<area shape="rect" id="node2" href="$classCommand.html" title="Abstract base class representing the commands to be executed." alt="" coords="38,5,163,141"/>
+</map>

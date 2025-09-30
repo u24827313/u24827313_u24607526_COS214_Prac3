@@ -1,0 +1,9 @@
+<map id="include/ChatRoom.h" name="include/ChatRoom.h">
+<area shape="rect" id="node1" title="Header file for the ChatRoom abstract base class." alt="" coords="463,5,616,32"/>
+<area shape="rect" id="node2" href="$Command_8h.html" title="Header file for the Command abstract base class." alt="" coords="298,80,450,107"/>
+<area shape="rect" id="node6" href="$CtrlCat_8h.html" title=" " alt="" coords="474,80,605,107"/>
+<area shape="rect" id="node7" href="$Dogorithm_8h.html" title="Header file for the Dogorithm class." alt="" coords="629,80,783,107"/>
+<area shape="rect" id="node3" href="$GetChatLogCommand_8h.html" title=" " alt="" coords="5,155,233,181"/>
+<area shape="rect" id="node4" href="$LogMessageCommand_8h.html" title="Header file for the LogMessage class." alt="" coords="257,155,491,181"/>
+<area shape="rect" id="node5" href="$SendMessageCommand_8h.html" title=" " alt="" coords="515,155,758,181"/>
+</map>

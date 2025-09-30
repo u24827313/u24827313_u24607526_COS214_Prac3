@@ -1,0 +1,9 @@
+<map id="include/GetChatLogCommand.h" name="include/GetChatLogCommand.h">
+<area shape="rect" id="node1" title=" " alt="" coords="88,5,316,32"/>
+<area shape="rect" id="node2" href="$Command_8h.html" title="Header file for the Command abstract base class." alt="" coords="151,80,253,107"/>
+<area shape="rect" id="node3" href="$ChatRoom_8h.html" title="Header file for the ChatRoom abstract base class." alt="" coords="107,155,209,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="182,304,241,331"/>
+<area shape="rect" id="node5" href="$Iterator_8h.html" title="Declaration of the Iterator class and related functionality." alt="" coords="5,229,87,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="111,229,173,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="6,304,86,331"/>
+</map>

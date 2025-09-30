@@ -58,8 +58,7 @@ void Users::executeAll()
         
         commandQueue.pop();  // Remove from queue
         
-        // Optional: Delete the command object if you're managing memory
-        // delete currentCommand;
+        delete currentCommand;
     }
     
     std::cout << "All commands executed successfully." << std::endl;

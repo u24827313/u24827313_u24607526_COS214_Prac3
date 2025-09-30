@@ -20,7 +20,14 @@
 
 class Meeoow: public Users{
     public:
+        /**
+         * @brief Meeoow Constructor
+         * @param name string of the the user's name
+         */
         Meeoow(std::string name):Users(name){}
+        /**
+         * @brief Meeoow Deconstructor
+         */
         ~Meeoow(){}
 };
 #endif

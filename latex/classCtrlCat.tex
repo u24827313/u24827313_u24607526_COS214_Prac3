@@ -1,0 +1,232 @@
+\hypertarget{classCtrlCat}{}\doxysection{Ctrl\+Cat Class Reference}
+\label{classCtrlCat}\index{CtrlCat@{CtrlCat}}
+
+
+Child class of \mbox{\hyperlink{classChatRoom}{Chat\+Room}}.  
+
+
+
+
+{\ttfamily \#include $<$Ctrl\+Cat.\+h$>$}
+
+
+
+Inheritance diagram for Ctrl\+Cat\+:
+% FIG 0
+
+
+Collaboration diagram for Ctrl\+Cat\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCtrlCat_a907711fc40c8328c86cba99136b27032}{Ctrl\+Cat}} (std\+::queue$<$ \mbox{\hyperlink{classUsers}{Users}} $\ast$ $>$ users, string $\ast$chat\+History)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classCtrlCat}{Ctrl\+Cat}} constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCtrlCat_a384290e27b168c55fa30f18ddd1abdfe}{register\+User}} (\mbox{\hyperlink{classUsers}{Users}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Register a new user in the chat room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCtrlCat_a11695437beeba44d80998d1276184ff6}{send\+Message}} (string, \mbox{\hyperlink{classUsers}{Users}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Send a message to the chat room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCtrlCat_a9c35e379600710e7b46e60a555352644}{save\+Message}} (string, \mbox{\hyperlink{classUsers}{Users}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Save a message to chat history. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCtrlCat_a697ed03dda18d08ea9ed72ad7735c976}{remove\+User}} (\mbox{\hyperlink{classUsers}{Users}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Remove a user from the chat room. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classChatRoom}{Chat\+Room}} $\ast$ \mbox{\hyperlink{classCtrlCat_a43f45f0b219740fc4f2be1f71f87aa98}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Create a clone of the chat room. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCtrlCat_acca0ac2a4a7f37fb50781639f5a01847}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Returns name of User. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCtrlCat_a8e8d62a87db79d16f854468c1f431687}{$\sim$\+Ctrl\+Cat}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCtrlCat_ac6a3accb6290334b05149486ac0422de}{get\+Chat\+Log}} ()
+\begin{DoxyCompactList}\small\item\em prints out the chat\+Log of the \mbox{\hyperlink{classCtrlCat}{Ctrl\+Cat}} chat\+Room \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIterator}{Iterator}} \mbox{\hyperlink{classCtrlCat_a436a9f102331dc9243956bf3c2ac20a8}{begin}} ()
+\begin{DoxyCompactList}\small\item\em returns the iterator at the beginning of the chat\+History pointer \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIterator}{Iterator}} \mbox{\hyperlink{classCtrlCat_a326da8b508fab82ac9c829f3703a7014}{end}} ()
+\begin{DoxyCompactList}\small\item\em returns the iterator at the end of the chat\+History pointer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Child class of \mbox{\hyperlink{classChatRoom}{Chat\+Room}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCtrlCat_a907711fc40c8328c86cba99136b27032}\label{classCtrlCat_a907711fc40c8328c86cba99136b27032}} 
+\index{CtrlCat@{CtrlCat}!CtrlCat@{CtrlCat}}
+\index{CtrlCat@{CtrlCat}!CtrlCat@{CtrlCat}}
+\doxysubsubsection{\texorpdfstring{CtrlCat()}{CtrlCat()}}
+{\footnotesize\ttfamily Ctrl\+Cat\+::\+Ctrl\+Cat (\begin{DoxyParamCaption}\item[{std\+::queue$<$ \mbox{\hyperlink{classUsers}{Users}} $\ast$ $>$}]{users,  }\item[{string $\ast$}]{chat\+History }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classCtrlCat}{Ctrl\+Cat}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & queue of users \\
+\hline
+{\em chat\+History} & all the chat\+Logs \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCtrlCat_a8e8d62a87db79d16f854468c1f431687}\label{classCtrlCat_a8e8d62a87db79d16f854468c1f431687}} 
+\index{CtrlCat@{CtrlCat}!````~CtrlCat@{$\sim$CtrlCat}}
+\index{````~CtrlCat@{$\sim$CtrlCat}!CtrlCat@{CtrlCat}}
+\doxysubsubsection{\texorpdfstring{$\sim$CtrlCat()}{~CtrlCat()}}
+{\footnotesize\ttfamily Ctrl\+Cat\+::$\sim$\+Ctrl\+Cat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCtrlCat_a436a9f102331dc9243956bf3c2ac20a8}\label{classCtrlCat_a436a9f102331dc9243956bf3c2ac20a8}} 
+\index{CtrlCat@{CtrlCat}!begin@{begin}}
+\index{begin@{begin}!CtrlCat@{CtrlCat}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIterator}{Iterator}} Ctrl\+Cat\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the iterator at the beginning of the chat\+History pointer 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classIterator}{Iterator}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCtrlCat_a43f45f0b219740fc4f2be1f71f87aa98}\label{classCtrlCat_a43f45f0b219740fc4f2be1f71f87aa98}} 
+\index{CtrlCat@{CtrlCat}!clone@{clone}}
+\index{clone@{clone}!CtrlCat@{CtrlCat}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classChatRoom}{Chat\+Room}}$\ast$ Ctrl\+Cat\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Create a clone of the chat room. 
+
+\begin{DoxyReturn}{Returns}
+Chat\+Room$\ast$ Pointer to the cloned chat room instance 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classChatRoom_a0fc3efd9fd0ab8f581458dc2bce6deb0}{Chat\+Room}}.
+
+\mbox{\Hypertarget{classCtrlCat_a326da8b508fab82ac9c829f3703a7014}\label{classCtrlCat_a326da8b508fab82ac9c829f3703a7014}} 
+\index{CtrlCat@{CtrlCat}!end@{end}}
+\index{end@{end}!CtrlCat@{CtrlCat}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIterator}{Iterator}} Ctrl\+Cat\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the iterator at the end of the chat\+History pointer 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classIterator}{Iterator}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCtrlCat_ac6a3accb6290334b05149486ac0422de}\label{classCtrlCat_ac6a3accb6290334b05149486ac0422de}} 
+\index{CtrlCat@{CtrlCat}!getChatLog@{getChatLog}}
+\index{getChatLog@{getChatLog}!CtrlCat@{CtrlCat}}
+\doxysubsubsection{\texorpdfstring{getChatLog()}{getChatLog()}}
+{\footnotesize\ttfamily void Ctrl\+Cat\+::get\+Chat\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+prints out the chat\+Log of the \mbox{\hyperlink{classCtrlCat}{Ctrl\+Cat}} chat\+Room 
+
+
+
+Implements \mbox{\hyperlink{classChatRoom_ad55d51dc4ba00b6515b7718b73f574b0}{Chat\+Room}}.
+
+\mbox{\Hypertarget{classCtrlCat_acca0ac2a4a7f37fb50781639f5a01847}\label{classCtrlCat_acca0ac2a4a7f37fb50781639f5a01847}} 
+\index{CtrlCat@{CtrlCat}!getName@{getName}}
+\index{getName@{getName}!CtrlCat@{CtrlCat}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Ctrl\+Cat\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns name of User. 
+
+\begin{DoxyReturn}{Returns}
+string which is the name of the pointer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classChatRoom_a9150b619476e2c1d65bf591d9f27b346}{Chat\+Room}}.
+
+\mbox{\Hypertarget{classCtrlCat_a384290e27b168c55fa30f18ddd1abdfe}\label{classCtrlCat_a384290e27b168c55fa30f18ddd1abdfe}} 
+\index{CtrlCat@{CtrlCat}!registerUser@{registerUser}}
+\index{registerUser@{registerUser}!CtrlCat@{CtrlCat}}
+\doxysubsubsection{\texorpdfstring{registerUser()}{registerUser()}}
+{\footnotesize\ttfamily void Ctrl\+Cat\+::register\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUsers}{Users}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Register a new user in the chat room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & Pointer to the \mbox{\hyperlink{classUsers}{Users}} object to register \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classChatRoom_af5841c571486016ff677dd9e0fa2d355}{Chat\+Room}}.
+
+\mbox{\Hypertarget{classCtrlCat_a697ed03dda18d08ea9ed72ad7735c976}\label{classCtrlCat_a697ed03dda18d08ea9ed72ad7735c976}} 
+\index{CtrlCat@{CtrlCat}!removeUser@{removeUser}}
+\index{removeUser@{removeUser}!CtrlCat@{CtrlCat}}
+\doxysubsubsection{\texorpdfstring{removeUser()}{removeUser()}}
+{\footnotesize\ttfamily void Ctrl\+Cat\+::remove\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUsers}{Users}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remove a user from the chat room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The user to remove \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classChatRoom_a3fe20246c0407eae1f127f4a6194fd62}{Chat\+Room}}.
+
+\mbox{\Hypertarget{classCtrlCat_a9c35e379600710e7b46e60a555352644}\label{classCtrlCat_a9c35e379600710e7b46e60a555352644}} 
+\index{CtrlCat@{CtrlCat}!saveMessage@{saveMessage}}
+\index{saveMessage@{saveMessage}!CtrlCat@{CtrlCat}}
+\doxysubsubsection{\texorpdfstring{saveMessage()}{saveMessage()}}
+{\footnotesize\ttfamily void Ctrl\+Cat\+::save\+Message (\begin{DoxyParamCaption}\item[{string}]{,  }\item[{\mbox{\hyperlink{classUsers}{Users}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Save a message to chat history. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message content to save \\
+\hline
+{\em user} & The user associated with the message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCtrlCat_a11695437beeba44d80998d1276184ff6}\label{classCtrlCat_a11695437beeba44d80998d1276184ff6}} 
+\index{CtrlCat@{CtrlCat}!sendMessage@{sendMessage}}
+\index{sendMessage@{sendMessage}!CtrlCat@{CtrlCat}}
+\doxysubsubsection{\texorpdfstring{sendMessage()}{sendMessage()}}
+{\footnotesize\ttfamily void Ctrl\+Cat\+::send\+Message (\begin{DoxyParamCaption}\item[{string}]{,  }\item[{\mbox{\hyperlink{classUsers}{Users}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Send a message to the chat room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message content to send \\
+\hline
+{\em sender} & The user sending the message \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{CtrlCat_8h}{Ctrl\+Cat.\+h}}\end{DoxyCompactItemize}

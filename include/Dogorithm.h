@@ -67,9 +67,20 @@ class Dogorithm : public ChatRoom
          */
         ~Dogorithm(){}
 
+        /**
+         * @brief prints out the chatLog of the CtrlCat chatRoom
+         */  
         void getChatLog();
 
+        /**
+         * @brief returns the iterator at the beginning of the chatHistory pointer
+         * @return Iterator
+         */  
         Iterator begin();
+        /**
+         * @brief returns the iterator at the end of the chatHistory pointer
+         * @return Iterator
+         */
         Iterator end();
 };
 #endif

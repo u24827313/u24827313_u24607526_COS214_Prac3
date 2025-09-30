@@ -1,0 +1,34 @@
+Registering users
+You have successfully been added  the chatRoom!
+You have successfully been added  the chatRoom!
+You have successfully been added  the chatRoom!
+You have successfully been added  the chatRoom!
+You have successfully been added  the chatRoom!
+user1 is already a part of this chatRoom!
+
+Users sending a message
+user2 has received a new message from user1 from the CtrlCat chatRoom!
+user3 has received a new message from user1 from the CtrlCat chatRoom!
+All commands executed successfully.
+user1 has received a new message from user2 from the CtrlCat chatRoom!
+user3 has received a new message from user2 from the CtrlCat chatRoom!
+All commands executed successfully.
+user1 has received a new message from user2 from the Dogorithm chatRoom!
+All commands executed successfully.
+user3 is not part of this chat room and cannot send messages!
+
+ Looking through chatLogs:
+The entire Chat Log for the CtrlCat chatRoom
+Hi There! :sent by  user1
+Hi User1 :sent by  user2
+All commands executed successfully.
+
+
+The entire Chat Log for the Dogorithm chatRoom
+Hi There! sent by  user2
+All commands executed successfully.
+
+Removing a User
+You have successfully left the chat!
+user3 is not part of this chat room!
+You have successfully left the chat!

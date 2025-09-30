@@ -48,8 +48,15 @@ public:
      */
     void send(std::string message, ChatRoom* room);
 
+    /**
+     * @brief User Constructor
+     * @param name string of user's name
+     */
     Users(std::string& name);
     
+    /**
+     * @brief User Decostructor
+     */
     virtual ~Users();
     /**
      * @brief Receives a message from another user in a chat room.
